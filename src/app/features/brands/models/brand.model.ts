@@ -1,9 +1,16 @@
-export interface VehicleBrand {
-  makeId: number;
-  makeName: string;
+export interface Brand {
+  id: number;
+  name: string;
 }
 
-export interface VehicleBrandResponse {
+export interface BrandResponse {
   Make_ID: number;
   Make_Name: string;
+}
+
+export interface BrandApiResponse {
+  Count: number;
+  Message: string;
+  SearchCriteria: string | null;
+  Results: BrandResponse[];
 }

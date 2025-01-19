@@ -1,1 +1,12 @@
-<p>brand-list works!</p>
+<h1 class="text-center">Brands {{ visibleBrands().length}}</h1>
+<mat-nav-list class="nav-list overflow-auto mx-auto w-full max-w-3xl" (scroll)="onScroll($event)">
+  <mat-list>
+    @for ( brand of visibleBrands(); track brand.id) {
+    <mat-list-item (click)="onClick(brand)">
+      <mat-icon matListItemIcon>shield</mat-icon>
+      <div matListItemTitle>{{brand.name}}</div>
+    </mat-list-item>
+    }
+  </mat-list>
+
+</mat-nav-list>

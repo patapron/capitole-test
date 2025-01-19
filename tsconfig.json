@@ -11,8 +11,8 @@
       "@features/*": [
         "app/features/*"
       ],
-      "@components/*": [
-        "app/components/*"
+      "@core/*": [
+        "app/core/*"
       ],
       "@models/*": [
         "app/shared/models/*"
@@ -20,9 +20,6 @@
       "@envs/*": [
         "environments/*"
       ],
-      "@services/*": [
-        "app/core/services/*"
-      ]
     },
     "outDir": "./dist/out-tsc",
     "strict": true,

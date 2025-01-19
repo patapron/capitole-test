@@ -1,11 +1,11 @@
-import { BrandsService } from './../../features/brands/services/brands.service';
 import { signalStore, withState, withMethods, patchState } from '@ngrx/signals';
-import { VehicleBrand } from '@features/brands/models/brand.model';
+import { Brand } from '@features/brands/models/brand.model';
 import { rxMethod } from '@ngrx/signals/rxjs-interop';
 import { pipe, switchMap, tap } from 'rxjs';
 import { inject } from '@angular/core';
+import { BrandsService } from '@features/brands/services/brands.service';
 export interface BrandState {
-  brands: VehicleBrand[];
+  brands: Brand[];
 }
 
 const initialState: BrandState = {
@@ -17,7 +17,7 @@ export const BrandStore = signalStore(
   withState(initialState),
   withMethods(
     ({ brands, ...store }, brandsService = inject(BrandsService)) => ({
-      loadProducts: rxMethod<void>(
+      loadBrands: rxMethod<void>(
         pipe(
           switchMap(() => {
             return brandsService.getBrands().pipe(

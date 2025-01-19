@@ -1,8 +1,8 @@
-import { VehicleBrand, VehicleBrandResponse } from '../models/brand.model';
+import { Brand, BrandResponse } from '../models/brand.model';
 
-export function mapBrandResponse(response: VehicleBrandResponse): VehicleBrand {
+export function mapBrandResponse(response: BrandResponse): Brand {
   return {
-    makeId: response.Make_ID,
-    makeName: response.Make_Name,
+    id: response.Make_ID,
+    name: response.Make_Name,
   };
 }
