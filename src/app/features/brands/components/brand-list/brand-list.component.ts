@@ -46,6 +46,7 @@ export class BrandListComponent {
   }
 
   onClick(brand: Brand) {
-    this.router.navigate(['/brand', brand.id]);
+    console.log('click', brand);
+    this.router.navigate([`/brands/${brand.id}`]);
   }
 }

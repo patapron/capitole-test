@@ -1,18 +1,18 @@
-interface Vehicle {
-  brandId: number;
-  brandName: string;
+export interface Vehicle {
   id: number;
   name: string;
+  brandId: number;
+  brandName: string;
 }
 
-interface VehicleResponse {
+export interface VehicleResponse {
   Make_ID: number;
   Make_Name: string;
   Model_ID: number;
   Model_Name: string;
 }
 
-interface VehicleApiResponse {
+export interface VehicleApiResponse {
   Count: number;
   Message: string;
   SearchCriteria: string;

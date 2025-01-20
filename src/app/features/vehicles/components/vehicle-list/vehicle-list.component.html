@@ -1,1 +1,12 @@
-<p>vehicle-list works!</p>
+<h1 class="text-center">Models</h1>
+<mat-nav-list class="nav-list overflow-auto mx-auto w-full max-w-3xl">
+  <mat-list>
+    @for ( vehicle of vehicles(); track vehicle.id) {
+    <mat-list-item>
+      <mat-icon matListItemIcon>car</mat-icon>
+      <div matListItemTitle>{{vehicle.name}}</div>
+    </mat-list-item>
+    }
+  </mat-list>
+
+</mat-nav-list>

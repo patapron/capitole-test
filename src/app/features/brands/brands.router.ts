@@ -4,12 +4,18 @@ const routes: Routes = [
   {
     path: '',
     loadComponent: () =>
-      import('./components/brand-layout/brand-layout.component'),
+      import('@features/brands/components/brand-layout/brand-layout.component'),
   },
   {
     path: ':id',
     loadComponent: () =>
-      import('./components/brand-detail/brand-detail.component'),
+      import(
+        '@features/vehicles/components/vehicle-layout/vehicle-layout.component'
+      ),
   },
+  // {
+  //   path: ':id',
+  //   loadChildren: () => import('@features/vehicles/vehicles.router'),
+  // },
 ];
 export default routes;
